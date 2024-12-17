@@ -3,8 +3,8 @@ import { typeWriterText } from '../../../your_info'
 import './Typewriter.css';
 
 
-const typing_speed = 150;
-const backspace_speed = 50;
+const typing_speed = 80;
+const backspace_speed = 40;
 
 function Typewriter() {
   const [skill, setSkill] = useState("");

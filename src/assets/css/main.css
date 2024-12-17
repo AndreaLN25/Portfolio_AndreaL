@@ -10,63 +10,93 @@
 :root {
   --light-white: #f2fbfc ;
   --light-color: #ffffff;
-  --medium-color: #B9BAB3;
+  --medium-color: #dbe0e2    ;
   --dark-color: #001F26;
   --highlight-color: #cfe5eb;
   --accent-color: #6d8a92;
 
 }
 
+.wow {
+  visibility: visible !important;
+  opacity: 1 !important;
+  animation-name: zoomIn !important;
+  animation-duration: 1s !important;
+}
+
+.wrapper {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
- 
+section {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100vh;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+
+}
+
 
 body {
-  
   letter-spacing: 0.2em;
   font-weight: normal;
   font-style: normal;
-  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
   
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-h1, h2, h3 {
-  font-family: 'Alex Brush', sans-serif;
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
 }
 
-p {
-  font-family: 'Oswald', sans-serif;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
 
-/* h2  {
-  font-family: 'Roboto', sans-serif;
-} */
 
+h1{
+  font-family: 'Merriweather', serif;
+} 
+h2 {
+  font-family: 'Poppins', sans-serif;
+}
 h3 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
-
-
+p {
+  font-family: 'Lato', sans-serif;
+}
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
   .container {
     width: 450px;
   }
 }
-
-.section {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  position: relative;
-}
-
-
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section {

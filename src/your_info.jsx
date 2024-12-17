@@ -7,17 +7,17 @@ const backgroundImageUrl = 'https://images.wallpaperscraft.com/image/single/man_
 
 // Enter here your first and last name
 const name = {
-  firstname: 'Jonathan',
-  lastname: 'Dominion',
+  firstname: 'Andrea',
+  lastname: 'López',
 // Enter as url a link where your resume can be downloaded ( dropbox, OneDrive, ect )
   url: 'https://www.google.com',
 };
 
 // Display your job title or skills or whatever you want in the typewriter
 const typeWriterText = [
-  'Photographer...',
-  'UX/UI designer...',
-  'Cool dude...'  
+  "I used to be an accountant...",
+  "I am a fullstack developer...",
+  "I will be an ERP consultant!!",  
 ];
 
 // Social media profiles buttons
@@ -25,12 +25,12 @@ const socialProfiles = [
   {
     name: 'LinkedIn',
     icon: 'lni lni-linkedin',
-    url: 'https://www.linkedin.com/in/christoph-pfrommer',
+    url: 'https://www.linkedin.com/in/andrea-lopez-/',
   },
   {
     name: 'GitHub',
     icon: 'lni lni-github',
-    url: 'https://github.com/Pfrommer1982',
+    url: 'https://github.com/AndreaLN25',
   },
   //   Add more social profiles here, it will automatically add more link-buttons with icons (if available)
   //   {
@@ -50,103 +50,90 @@ const socialProfiles = [
 
 const categories = [
   {
-    name: 'Web Development',
+    name: 'Tech Skills',
+    type: 'techskills',
     icon: 'lni lni-code',
-    title: 'Photography',
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam lorem, tempus at dapibus vitae, vehicula sit amet dui. Fusce at libero id massa ornare molestie sed eu tellus.",
+    title: 'Tech Skills',
+    description: "Technical expertise gained through experience in development, accounting, and SAP consulting.",
     skills: [
-      {
-        icon: 'lni lni-camera',
-        title: 'HTML5',
-      },
-      {
-        icon: 'lni lni-certificate',
-        title: 'CSS3',
-      },
-      {
-        icon: 'lni lni-instagram',
-        title: 'JavaScript',
-      },
-    ],
-  },
-  {
-    name: 'Software',
-    icon: 'lni lni-code',
-    title: 'Software',
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam lorem, tempus at dapibus vitae, vehicula sit amet dui. Fusce at libero id massa ornare molestie sed eu tellus.",
-    skills: [
-      {
-        icon: 'lni lni-adobe',
-        title: 'adobe',
-      },
-      {
-        icon: 'lni lni-code',
-        title: 'Code',
-      },
-      {
-        icon: 'lni lni-sketch',
-        title: 'Sketch'
-      },
-     
-      
-    ],
-  },
-  {
-    name: 'brands',
-    icon: 'lni lni-code',
-    title: 'Brands',
-    description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam lorem, tempus at dapibus vitae, vehicula sit amet dui. Fusce at libero id massa ornare molestie sed eu tellus.",
-    skills: [
-      {
-        icon: 'lni lni-pinterest',
-        title: 'Pinterest',
-      },
-      {
-        icon: 'lni lni-crop',
-        title: 'Crop',
-      },
-      
+      { icon: "simple-icons:html5" },
+      { icon: "simple-icons:css3" },
+      { icon: "simple-icons:javascript" },
+      { icon: "simple-icons:php" },
+      { icon: "simple-icons:react" },
+      { icon: "simple-icons:python" },
+      { icon: "simple-icons:mysql" },
+      { icon: "simple-icons:mongodb" },
+      { icon: "simple-icons:git" },
+      { icon: "simple-icons:postman" },
     ],
   },
   
+  {
+    name: 'Soft Skills',
+    type: 'softskills',
+    icon: 'lni lni-users',
+    title: 'Soft Skills',
+    description: "Interpersonal skills refined across development, finance, and SAP consulting, with a focus on collaboration and problem-solving.",
+    skills: [
+      { title: "Organization" },
+      { title: "Responsibility" },
+      { title: "Time Management" },
+      { title: "Teamwork" },
+      { title: "Proactive Problem Solving" },
+      { title: "Stress Management" },
+    ],
+  },
+  
+  {
+    name: 'Certifications',
+    type: 'certifications',
+    icon: 'lni lni-graduation',
+    title: 'Certifications',
+    description: "Validating professional expertise with certifications in development, accounting, and SAP.",
+    skills: [
+      { title: "A3ASESOR Certification" },
+      { title: "Full Stack Developer" },
+      { title: "SAP (In Progress)" },
+    ],
+  },
 ];
 
-// Here you can give in your achiements in a number counter animation
-const achievements = [
-  { word: 'bullshit', value: 100, unit: '%' },
-  { word: 'finished projects', value: 7500, unit: '' },
-  { word: 'experience', value: 20, unit: ' years' },
-];
+
+// // Here you can give in your achiements in a number counter animation
+// const achievements = [
+//   { word: 'bullshit', value: 100, unit: '%' },
+//   { word: 'finished projects', value: 7500, unit: '' },
+//   { word: 'experience', value: 20, unit: ' years' },
+// ];
 
 
 
 // If you already have some projects, fill the url 
 const projectData = [
   {
-    title: 'Project 1',
-    description: 'Description of Project 1',
-    demoUrl: 'https://wallpaperaccess.com/full/530366.jpg' 
+    title: 'A3 Wolters Kluwer Software',
+    description: 'Expert in using A3 Wolters Kluwer for accounting and financial management.',
+    demoUrl: '',
+    category: 'Accounting',
+    image: 'images/A3_WOLTERS.jpeg',
   },
   {
-    title: 'Project 2',
-    description: 'Description of Project 2',
-    demoUrl: 'https://wallpapercave.com/wp/wp1933134.jpg' 
+    title: 'My Coding Projects',
+    description: 'A few full-stack apps, backends, and REST APIs showcasing my skills in development.',
+    demoUrl: '',
+    category: 'Development',
   },
   {
-    title: 'Project 3',
-    description: 'Description of Project 3',
-    demoUrl: 'https://c4.wallpaperflare.com/wallpaper/43/399/700/photography-camera-birds-animals-wallpaper-preview.jpg' 
+    title: 'SAP',
+    description: 'Currently self-learning SAP to build a career in ERP development or consulting.',
+    demoUrl: '',
+    category: 'Consultant',
+    image: 'images/SAP.jpeg',
   },
-  {
-    title: 'Project 2',
-    description: 'Description of Project 2',
-    demoUrl: 'src/assets/images/Jonathan Dominion Template.gif' 
-  },
-  
 ];
+
+
 
 
 //////////////////////////////////////// ** FOOTER SECTION **//////////////////////////////////////////////////
@@ -155,9 +142,14 @@ const projectData = [
 
 // You can tell something about yourself in the infotext.
 const aboutMeText = {
-  infotext: `Hi there, I'm Jonathan. With 20 years of experience as photographer Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas diam lorem, tempus at dapibus vitae, vehicula sit amet dui. Fusce at libero id massa ornare molestie sed eu tellus.
-    `,
-  power_slogan: `Lorem ipsum dolor sit amet`,
+  infotext: `
+Hi, I'm Andrea.After 4 years as an accountant, I've transitioned into programming and ERP consulting.
+
+I hold a degree in Business Administration from Universitat de Barcelona and a Master's in Financial Management from EAE Business School. I also completed a Fullstack Developer Bootcamp in PHP, with a focus on Laravel, React, and databases.
+
+With experience in ERP systems and a background in finance, I'm now aiming to combine both fields, particularly in SAP consulting, to help companies optimize their processes through tech-driven solutions. `,
+
+  power_slogan: `Accountant | Full Stack Developer | Aspiring ERP Consultant`,
 };
 
 // For contact form: You need to make an account on emailjs.com
@@ -166,9 +158,9 @@ const aboutMeText = {
 // Fill them here and it will automatically work. 
 
 const emailConfig = {
-  serviceID: 'service_XXXXXXX',
-  templateID: 'template_XXXXXXXX',
-  userID: 'XXXXXXXXXXXX',
+  serviceID: 'service_a0ng9qr',
+  templateID: 'template_zdb7oks',
+  userID: 'V8IVUUfpCtrvMV0Lp'
 };
 
 export {
@@ -177,7 +169,7 @@ export {
   typeWriterText,
   socialProfiles,
   categories,
-  achievements,
+  // achievements,
   projectData,
   aboutMeText,
   emailConfig,

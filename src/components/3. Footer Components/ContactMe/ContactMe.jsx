@@ -27,54 +27,61 @@ const ContactMe = () => {
   return (
     <section id='ContactMe'>
       <div className='form-container wow fadeInRight' data-wow-delay='.4s'>
-        <div className='contact-form-wrapper d-flex justify-content-center'>
+        <div className='contact-form-wrapper d-flex justify-content-center align-items-center'>
           <form ref={form} onSubmit={sendEmail} className='contact-form'>
-            <h5 className='title'>Contact Me</h5>
-            <p className='description'>
-              Feel free to contact me if you like to reach out or have any
-              questions.
-            </p>
-            <div>
-              <input
-                type='text'
-                className='form-control rounded border-white mb-3 form-input'
-                name='user_name'
-                placeholder='Name'
-                required
-              />
-            </div>
-            <div>
-              <input
-                type='email'
-                className='form-control rounded border-white mb-3 form-input'
-                name='user_email'
-                placeholder='Email'
-                required
-              />
-            </div>
-            <div>
-              <textarea
-                className='form-control rounded border-white mb-3 form-text-area'
-                name='message'
-                rows='5'
-                cols='30'
-                placeholder='Message'
-                required
-              ></textarea>
-            </div>
-            <div className='submit-button-wrapper' data-wow-delay='.6s'>
-              {!isMessageSent ? (
+            {!isMessageSent && (
+              <>
+                <h5 className='title'>Contact Me</h5>
+                <p className='description'>
+                  Feel free to contact me if you like to reach out or have any
+                  questions.
+                </p>
+              </>
+            )}
+            {!isMessageSent ? (
+              <>
+                <div>
+                  <input
+                    type='text'
+                    className='form-control rounded border-white mb-3 form-input'
+                    name='user_name'
+                    placeholder='Name'
+                    required
+                  />
+                </div>
+                <div>
+                  <input
+                    type='email'
+                    className='form-control rounded border-white mb-3 form-input'
+                    name='user_email'
+                    placeholder='Email'
+                    required
+                  />
+                </div>
+                <div>
+                  <textarea
+                    className='form-control rounded border-white mb-3 form-text-area'
+                    name='message'
+                    rows='5'
+                    cols='30'
+                    placeholder='Message'
+                    required
+                  ></textarea>
+                </div>
+              </>
+            ) : (
+              <div className='success-message'>
+                <h4>Message Sent Successfully!</h4>
+                <p>Thank you for contacting me.</p>
+              </div>
+            )}
+            {!isMessageSent && (
+              <div className='submit-button-wrapper' data-wow-delay='.6s'>
                 <button type='submit' className='submit-button'>
                   Send
                 </button>
-              ) : (
-                <div className='success-message'>
-                  <h4>Message Sent Successfully!</h4>
-                  <p>Thank you for contacting me.</p>
-                  
-                </div>
-              )}
-            </div>
+              </div>
+            )}
           </form>
         </div>
       </div>

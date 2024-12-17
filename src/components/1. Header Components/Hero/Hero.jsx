@@ -3,14 +3,12 @@ import { name, socialProfiles } from '../../../your_info';
 import Navbar from '../Navbar/Navbar';
 import Typewriter from '../Typewriter/Typewriter';
 import './Hero.css';
-import { backgroundImageUrl } from '../../../your_info';
-
 
 const Hero = () => {
   const { firstname, lastname } = name;
 
   const heroStyle = {
-    backgroundImage: `url(${backgroundImageUrl})`,
+    backgroundColor: '#eee0e0',
   };
 
   return (
@@ -27,7 +25,6 @@ const Hero = () => {
             </div>
             <div className='typewriter-container wow fadeInLeft' data-wow-delay='.6s'>
               <Typewriter />
-      
             </div>
             <div className='btn-pos'>
               {socialProfiles.map((profile, index) => (

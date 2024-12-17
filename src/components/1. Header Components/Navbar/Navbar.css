@@ -66,11 +66,11 @@
 }
 
 .link-span {
-  color: var(--light-color);
+  color: var(--accent-color)
 }
 
 .link-span:hover {
-  color: var(--light-white);
+  color: rgb(114, 157, 158);
 }
 
 .nav-link:hover::before {

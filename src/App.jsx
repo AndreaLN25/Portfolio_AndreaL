@@ -5,7 +5,7 @@ import Hero from './components/1. Header Components/Hero/Hero';
 
 // 2. Content Components
 import Skillz from './components/2. Content Components/Skillz/Skillz';
-import Achievement from './components/2. Content Components/Achievement/Achievement';
+// import Achievement from './components/2. Content Components/Achievement/Achievement';
 import Projects from './components/2. Content Components/Projects/Projects';
 
 
@@ -35,13 +35,14 @@ function App() {
         <Spinner />
       ) : (
         <>
-          <Hero />
-          <Skillz />
-          <ScrollToTopButton />
-          <Achievement />
-          <Projects />
-          <AboutMe />
-          
+          <div className="wrapper">
+            <Hero />
+            <Skillz />
+            <ScrollToTopButton />
+            {/* <Achievement /> */}
+            <Projects />
+            <AboutMe />
+          </div>
         </>
       )}
     </>
